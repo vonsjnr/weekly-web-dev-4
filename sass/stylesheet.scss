@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+//media queries
+@media (max-width: 767px) {
+  .left_menu, .right_menu {
+  display: block;
+}
+  .nav_menu, .presentation_menu, .media_menu, .social_div  {
+      display: inline-block;
+  }
+}
+
+@media (min-width: 768px) {
+  .left_menu, .right_menu, .nav_menu, .presentation_menu, .media_menu, .social_div  {
+    display: inline-block;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+//section properties
+
+.content {
+  text-align: center;
+  background-color: #506881;
+}
+.nav_menu, .media_menu, .sign, .newsletter {
+  background-color: #fff;
+}
+.fb_div {
+  background-color: #4d6baa;
+}
+.twit_div {
+  background-color: #4fc6f8;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+
+.nav_menu {
+  vertical-align: top;
+  width: 230px;
+  float: left;
+  a {
+  vertical-align: 7px;
+  }
+  ul {
+    margin: 0;
+  }
+  li {
+    padding: 15px;
+    border-bottom: 1px solid lightgrey;
+  }
+  li:hover {
+    background-color: #56ccc8;
+    a {color: white;
+      font-weight: 700;}
+    img{
+      -webkit-filter: brightness(0) invert(1);
+      filter: brightness(0) invert(1);
+    }
+  }
+  .contact_ul {
+    color: white;
+    background-color: #c5cdd1;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    border: none;
+    padding: 22px 10px;
+    a {color: white;
+      vertical-align: 5px;
+      display: block;
+    }
+    img {
+      -webkit-filter: brightness(0) invert(1);
+      filter: brightness(0) invert(1);
+      margin: 0;
+      }
+    li {
+      display: inline-block;
+      padding: 10px 5px;
+      border: none;
+    }
+    li:hover {
+      background-color: #c5cdd1;
+    }
+    .contact_p {
+      vertical-align: middle;
+    }
+  }
+}
+.presentation_menu {
+  background-color: #152840;
+  width: 230px;
+  ul {
+    font-size: 15px;
+    padding: 10px 15px;
+    margin: 0;
+    border-bottom: 1px solid #49637d;
+    a {
+      color: white;
+    }
+    a:hover {
+      color: #56ccc8;
+    }
+    ul:nth-child(3) {
+      border-bottom: none;
+    }
+  }
+  ul:hover {
+    background-color: #263a54;
+  }
+  li {
+    padding: 8px;
+  }
+  .header_li {
+    color: #56ccc8;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+  .arrow {
+    float: right;
+    filter: none;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+}
+
+img {
+  width: 25px;
+  height: 25px;
+  -webkit-filter: brightness(90%) invert(50%);
+  filter: brightness(0%) invert(70%);
+  margin-right: 15px;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+li {
+  text-align: left;
+}
