@@ -2,11 +2,11 @@
 @media (max-width: 767px) {
   .left_menu, .right_menu {
     display: block; }
-  .nav_menu, .presentation_menu, .media_menu, .social_div {
+  .nav_menu, .presentation_menu, .left_col, .right_col {
     display: inline-block; } }
 
 @media (min-width: 768px) {
-  .left_menu, .right_menu, .nav_menu, .presentation_menu, .media_menu, .social_div {
+  .left_menu, .right_menu, .nav_menu, .presentation_menu, .left_col, .right_col {
     display: inline-block; } }
 
 body {
@@ -16,16 +16,15 @@ body {
   text-align: center;
   background-color: #506881; }
 
-.nav_menu, .media_menu, .sign, .newsletter {
+.left_menu, .right_menu {
+  vertical-align: top;
+  margin: 7px; }
+
+.nav_menu, .left_col, .sign_row, .newsletter_row {
   background-color: #fff; }
 
-.fb_div {
-  background-color: #4d6baa; }
-
-.twit_div {
-  background-color: #4fc6f8; }
-
 a {
+  color: black;
   text-decoration: none; }
 
 a:visited {
@@ -42,6 +41,9 @@ a:visited {
   .nav_menu li {
     padding: 15px;
     border-bottom: 1px solid lightgrey; }
+    .nav_menu li img {
+      -webkit-filter: brightness(90%) invert(50%);
+      filter: brightness(0%) invert(70%); }
   .nav_menu li:hover {
     background-color: #56ccc8; }
     .nav_menu li:hover a {
@@ -104,11 +106,73 @@ a:visited {
     height: 15px;
     margin-right: 5px; }
 
+.left_col {
+  width: 210px;
+  margin-right: 7px; }
+  .left_col a {
+    vertical-align: 7px; }
+  .left_col li {
+    border-bottom: none;
+    padding: 17px; }
+    .left_col li img {
+      filter: grayscale(100%); }
+  .left_col li:hover img {
+    filter: none; }
+  .left_col .fb:hover {
+    color: #4d6baa; }
+  .left_col .twit:hover {
+    color: #4fc6f8; }
+  .left_col .ggl:hover, .left_col .pin:hover {
+    color: #ea6262; }
+  .left_col .rss:hover {
+    color: #fd7e14; }
+
+.right_col {
+  vertical-align: top;
+  width: 210px;
+  margin-left: 7px;
+  margin-bottom: 7px; }
+
+.fb_div {
+  background-color: #4d6baa; }
+
+.twit_div {
+  background-color: #4fc6f8;
+  margin-top: 16px; }
+  .twit_div .right_pos {
+    right: -48px !important; }
+
+.fb_div, .twit_div {
+  height: 165px;
+  position: relative;
+  color: white; }
+  .fb_div a, .twit_div a {
+    color: white; }
+  .fb_div img, .twit_div img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px; }
+  .fb_div .logo, .twit_div .logo {
+    float: left;
+    margin-top: 25px;
+    width: 45px;
+    height: 45px; }
+  .fb_div ul, .twit_div ul {
+    position: absolute;
+    bottom: 0;
+    margin: 0 15px; }
+  .fb_div li, .twit_div li {
+    display: inline-block;
+    position: relative; }
+  .fb_div .right_pos, .twit_div .right_pos {
+    right: -60px; }
+
+.fb_div:hover, .twit_div:hover {
+  filter: brightness(90%); }
+
 img {
   width: 25px;
   height: 25px;
-  -webkit-filter: brightness(90%) invert(50%);
-  filter: brightness(0%) invert(70%);
   margin-right: 15px; }
 
 ul {
