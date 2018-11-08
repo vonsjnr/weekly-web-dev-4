@@ -1,18 +1,84 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700');
 
 //media queries
-@media (max-width: 767px) {
-  .left_menu, .right_menu {
-  display: block;
+@media (max-width: 575px) {
+  .left_menu {
+    margin: 0;
+    padding: 10px 10px 5px 10px;
+  }
+  .right_menu {
+    margin: 0;
+    padding: 5px 10px 10px 10px;
+  }
+  .nav_menu, .presentation_menu, .left_col {
+  width: 100%;
+  }
+  .left_col, .right_col {
+    width: 100%;
+  }
+  .right_col {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  .presentation_menu {
+    margin-top: 10px;
+  }
+  .sign_row {
+    p { font-size: 12px;}
+  }
+  .sign_row, .newsletter_row, .twit_div {
+    margin-top: 12px!important;
+  }
 }
+@media (min-width:576px) and (max-width: 991px) {
+  .left_menu, .right_menu {
+    display: block;
+    margin: 0;
+    padding: 5px 10px;
+  }
+  .left_menu {
+    padding-top: 10px;
+  }
   .nav_menu, .presentation_menu, .left_col, .right_col  {
       display: inline-block;
   }
+  .nav_menu {
+    float: left;
+  }
+  .nav_menu, .presentation_menu {
+    width: 50%;
+  }
+  .left_col {
+    width: 50%;
+    margin-right: 0;
+  }
+  .right_col {
+    width: 48%;
+    margin-left: 0;
+  }
+
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .left_menu, .right_menu, .nav_menu, .presentation_menu, .left_col, .right_col  {
     display: inline-block;
+  }
+  .left_menu, .right_menu {
+    margin: 0;
+    padding: 10px 5px;}
+  .nav_menu{
+    width: 230px;
+    float: left;
+  }
+  .presentation_menu {
+    width: 230px;
+  }
+  .left_col, .right_col {
+    width: 221px;
+  }
+  .right_col {
+    margin-left: 6px;
   }
 }
 
@@ -27,7 +93,6 @@ body {
 }
 .left_menu, .right_menu {
   vertical-align: top;
-  margin: 7px;
 }
 .nav_menu, .left_col, .sign_row, .newsletter_row {
   background-color: #fff;
@@ -41,10 +106,9 @@ a:visited {
 }
 
 //section properties
+//left side (992px+)
 .nav_menu {
   vertical-align: top;
-  width: 230px;
-  float: left;
   a {
   vertical-align: 7px;
   }
@@ -60,8 +124,7 @@ a:visited {
   }
   li:hover {
     background-color: #56ccc8;
-    a {color: white;
-      font-weight: 700;}
+    a {color: white;}
     img{
       -webkit-filter: brightness(0) invert(1);
       filter: brightness(0) invert(1);
@@ -99,7 +162,6 @@ a:visited {
 }
 .presentation_menu {
   background-color: #152840;
-  width: 230px;
   ul {
     font-size: 15px;
     padding: 10px 15px;
@@ -134,10 +196,9 @@ a:visited {
     margin-right: 5px;
   }
 }
-
 .left_col {
-  width: 210px;
-  margin-right: 7px;
+  margin-right: 6px;
+  float: left;
   a {
     vertical-align: 7px;
   }
@@ -166,26 +227,17 @@ a:visited {
     color: #fd7e14;
   }
 }
-.right_col {
-  vertical-align: top;
-  width: 210px;
-  margin-left: 7px;
-  margin-bottom: 7px;
-}
 
+//right side (992px+)
 .fb_div {
   background-color: #4d6baa;
 }
 .twit_div {
   background-color: #4fc6f8;
   margin-top: 16px;
-  .right_pos {
-    right: -48px!important;
-  }
 }
 .fb_div, .twit_div {
   height: 165px;
-  position: relative;
   color: white;
   a{
     color: white;
@@ -197,27 +249,75 @@ a:visited {
   }
   .logo {
     float: left;
-    margin-top: 25px;
+    margin: 15px;
     width: 45px;
     height: 45px;
   }
   ul {
-    position: absolute;
-    bottom: 0;
-    margin: 0 15px;
+    margin: 0;
+    width: 100%;
+    display: inline-block;
   }
   li {
     display: inline-block;
-    position: relative;
-  }
-  .right_pos {
-    right: -60px;
+    height: 40px;
+    line-height: 120px;
   }
   .left_pos {
+    margin-left: 20px;
+    float: left;
+  }
+  .right_pos {
+    margin-right: 10px;
+    float: right;
   }
 }
 .fb_div:hover, .twit_div:hover {
   filter: brightness(90%);
+}
+.newsletter_row {
+  p {
+  font-size: 12px;
+  }
+  button {
+    background-color: #ea6060;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  input {
+    width: 50%;
+    margin: 0 15px;
+    padding: 10px 10px;
+    font-size: 16px;
+    color: #c8cdcf;
+  }
+  input::placeholder {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #c8cdcf;
+  }
+}
+.sign_row, .newsletter_row {
+  height: 143px;
+  margin-top: 16px;
+  font-weight: 400;
+  h2 {
+    font-weight: 500;
+    padding-top: 15px;
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
 
 img {
