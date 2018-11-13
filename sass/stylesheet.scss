@@ -30,6 +30,15 @@
   .sign_row, .newsletter_row, .twit_div {
     margin-top: 12px!important;
   }
+  .mySlides {
+    .text {
+      font-size: 12px;
+      width: 90%;
+      margin-left: 15px;
+      position: absolute;
+      top: 73%;
+    }
+  }
 }
 @media (min-width:576px) and (max-width: 991px) {
   .left_menu, .right_menu {
@@ -80,16 +89,27 @@
   .right_col {
     margin-left: 6px;
   }
+  .mySlides {
+    img {
+      width: 928px!important;
+    }
+  }
+  .prev {
+    left: 3.5%!important;
+  }
+  .next {
+    right: 3.5%!important;
+  }
 }
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #506881;
 }
 //general properties
 
-.content {
+.content-menu {
   text-align: center;
-  background-color: #506881;
 }
 .left_menu, .right_menu {
   vertical-align: top;
@@ -331,4 +351,111 @@ ul {
 }
 li {
   text-align: left;
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    img {
+      width: 100%;
+      height: 80%;
+      margin-right: 0;
+      line-height: 115px;
+    }
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next/left button" to the right/left */
+.next {
+  right: 1.5%;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 1.5%;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 14px;
+  position: absolute;
+  top: 100px;
+  width: 30%;
+  text-align: left;
+  margin-left: 50px;
+  font-weight: 500;
+}
+
+/* Number text (Image One/Two etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 28px;
+  position: absolute;
+  font-weight: 500;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
