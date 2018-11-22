@@ -1,3 +1,5 @@
 weekly-web-dev-4
 
-html + css + js
+html + css(less) + vanilla js
+
+demo: https://vonsjnr.github.io/weekly-web-dev-4/
